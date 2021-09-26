@@ -8,6 +8,25 @@ will accurately tell him whether the combined sample contains any amount of pois
 3A) Give a procedure to accomplish this that will use O(log n) tests.
 notes: this is like a binary search. It could be the nth glass of wine and we cut it in half then search 
 
+findPoison(int[] arr, int x) //x is the poison
+
+int size = sizeof(arr);
+if(size > 1){
+
+int middle = n/2
+if(arr[middle] == x){
+   return middle;
+}
+int[] bottom = [1,...,middle]
+int[] top = [middle+1,...,n]
+
+if(poison = in bottom){
+  return findPoison(bottom, x);
+}else{
+  return findPoison(top, x);
+} 
+           
+}
 
 3B) Show that no matter what procedure Holmes uses, Ω(log n) tests may be necessary. Since the host is a computer scientist, you may assume that n = 2k
 
