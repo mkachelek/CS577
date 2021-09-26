@@ -6,6 +6,8 @@ present a combined sample from any subset of wine glasses to the test, and the t
 will accurately tell him whether the combined sample contains any amount of poison.
 
 3A) Give a procedure to accomplish this that will use O(log n) tests.
+notes: this is like a binary search. It could be the nth glass of wine and we cut it in half then search 
+
 
 3B) Show that no matter what procedure Holmes uses, Ω(log n) tests may be necessary. Since the host is a computer scientist, you may assume that n = 2k
 
