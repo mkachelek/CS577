@@ -1,0 +1,13 @@
+2. In class (9/15/21) it was claimed that when n is repeatedly split using the rule n →
+⌊n/2⌋, ⌈n/2⌉, thereby making a binary tree, the numbers on each level of the tree
+differ by at most 1.
+
+2A) Prove this (use induction)
+
+2B) Fix k > 0. Characterize the n for which the difference is 0 at level k. (To be
+definite, say that n is at level 0, its two children are at level 1, and so on.)
+
+2C) Design an algorithm that, when given a number n and a level k, finds which
+numbers occur at level k and how many of each there are. Include a proof of its
+correctness. Analyze the running time of your algorithm. It should be more efficient than
+simply writing out the tree. Full credit for an O(log n) solution.
