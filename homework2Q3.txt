@@ -1,0 +1,11 @@
+3. While at an elegant dinner party, Dr. Moriarty has laced one of n glasses of wine
+with a deadly poison. Mr. Holmes is also a guest, and wishes to warn the intended
+victim as quickly as possible. Luckily, there is a chemical test for the poison that is
+extremely sensitive and can be applied to combined samples. Thus, Mr. Holmes can
+present a combined sample from any subset of wine glasses to the test, and the test
+will accurately tell him whether the combined sample contains any amount of poison.
+
+3A) Give a procedure to accomplish this that will use O(log n) tests.
+
+3B) Show that no matter what procedure Holmes uses, Ω(log n) tests may be necessary. Since the host is a computer scientist, you may assume that n = 2k
+
