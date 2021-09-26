@@ -30,3 +30,5 @@ if(poison = in bottom){
 
 3B) Show that no matter what procedure Holmes uses, Ω(log n) tests may be necessary. Since the host is a computer scientist, you may assume that n = 2k
 
+if n = 1, we directly return 1. 
+No matter what, we go through the array. The algorithm will always be at least log n because the list gets smaller. even if the algorithm cuts the array in half once, it still gets smaller before finding the answer if it is the middle. 
