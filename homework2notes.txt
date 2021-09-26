@@ -15,17 +15,21 @@ we want to compute:
     Ix, the share to each x and 
     Lx, the share to each n - x 
     
-1. use array 
+1. use array???
 2. find the amount of ill(x) and leg(n-x)
 3. each x = 1/3(n-x)
 4. each (n-x) gets that divided by (n-x)
 
 
+Thine algorithm <3
+
+1A)
+
 int calcInheritance(int n, int x, int totalInherit){ //we have n children, x are illegitimate, then the total amount that is being split 
 
 int numOfIll = x; //illegitimate children 
 int numOfLeg = n-x; //legitimate children 
-int forIll = 0;
+int forIll = 0; //amount each gets 
 int forLeg = 0;
 
 //calc what it would be, divided equally
@@ -34,9 +38,15 @@ int ifEqual = totalInherit/n;
 forIll = (1/3)* ifEqual; //how much each illegit gets
 
 //now calc legit
-forLeg = (totalInherit - (notEqual * x))/numofLeg; //
-
-
-
+forLeg = (totalInherit - (forIll * numOfIll))/numofLeg; // we do total - (num each gets * each person) divided by number of legit people that gets some
 
 }
+
+1B)
+
+
+
+
+
+
+
