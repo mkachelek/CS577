@@ -23,26 +23,57 @@ we want to compute:
 
 Thine algorithm <3
 
-1A)
+1A)  Suppose there are n children, of whom x are illegitimate. Design an algorithm
+that allows you to compute Ix, the share due each illegitimate child, and Lx, the
+share due each legitimate child, for x = 1, . . . , n.
 
-int calcInheritance(int n, int x, int totalInherit){ //we have n children, x are illegitimate, then the total amount that is being split 
+public class YourClassNameHere {
+  
+  static void calcInheritance(int n, int x, int totalInherit){ //we have n children, x are illegitimate, then the total amount that is being split 
 
-int numOfIll = x; //illegitimate children 
-int numOfLeg = n-x; //legitimate children 
-int forIll = 0; //amount each gets 
-int forLeg = 0;
+        int numOfI = x; //illegitimate children 
+        int numOfL = n-x; //legitimate children 
+        double Ix = 0.0; //amount each gets 
+        double Lx = 0.0;
 
-//calc what it would be, divided equally
-int ifEqual = totalInherit/n;
+        //calc what it would be, divided equally
+        double ifEqual = totalInherit/n;
 
-forIll = (1/3)* ifEqual; //how much each illegit gets
+        Ix =  ifEqual/3; //how much each illegit gets
 
-//now calc legit
-forLeg = (totalInherit - (forIll * numOfIll))/numofLeg; // we do total - (num each gets * each person) divided by number of legit people that gets some
+        //now calc legit
+        Lx = (totalInherit - (Ix * numOfI))/numOfL; // we do total - (num each gets * each person) divided by number of legit people that gets some
+
 
 }
 
-1B)
+    public static void main(String[] args) {
+      calcInheritance(7,4,750);
+      //Ix	35.666666666666664
+      //Lx	202.44444444444446
+    }
+}
+
+1B) As a function of n, how many operations are used by your algorithm? A big-O
+result is sufficient
+
+This is constant because there are no loops, it does simple math. This is O(1).
+
+1C) Use your procedure to determine the shares when n = 7 and x = 4
+somethign might be wrong but I will pretend the inheritance is $750 total:
+750/7 = 107
+Ix = (1/3)107 = 35.714
+Lx = (750-(35.714*4))/3 = 202.38
+
+if the inheritance is $750, each legitimate child gets $94.155 and each illegitimate child ets $22.72
+
+1D) Naive algorithm design can have unintended effects. Discuss what happens when x = n
+I will try to do that here
+n = 4, x = 4 
+750/(7+4) = 68.18
+Ix = (1/3)68.18 = 22.72
+Lx = (750-(22.72*4))/7 = 94.155
+
 
 
 
