@@ -1,3 +1,4 @@
+//algo
 findPoison(int[] arr, int x) //x is the poison
 
 int size = sizeof(arr);
