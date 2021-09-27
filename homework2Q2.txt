@@ -4,6 +4,17 @@ differ by at most 1.
 
 2A) Prove this (use induction)
 
+# levels: log2(n) + O(1)
+# key comps <= nlogn + O(n)
+ex: n = 11 
+            11
+          5   6
+        2  3 3  3
+      1 1 1 2 1 2 1 2
+1 0 1 0 1 0 1 1 1 1 1 1 0 1 1 
+
+every level differs by 1. 
+
 2B) Fix k > 0. Characterize the n for which the difference is 0 at level k. (To be
 definite, say that n is at level 0, its two children are at level 1, and so on.)
 
