@@ -15,6 +15,20 @@ ex: n = 11
 
 every level differs by 1. 
 
+I will use induction to prove A n e N P(n) where n → ⌊n/2⌋, ⌈n/2⌉ the numbers on each level of the tree differ by 1 at most for n>0.
+
+Base: if the number is 0, it will have no children. if the number is 1, then its children will be 1 and 0. All of these children differ by 1. 
+
+Hypothesis: assume P(k) holds for an arbitrary nonnegative integer k. k → ⌊k/2⌋, ⌈k/2⌉,  the numbers on each level of the tree differ by at most 1.
+Given P(k) is true, P(k+1) is also true. 
+k+1 → ⌊(k+1)/2⌋, ⌈(k+1)/2⌉
+k+1 → ⌊(k/2)+(1/2)⌋, ⌈(k/2)+(1/2)⌉
+k+1 → ⌊(k/2)⌋, ⌈(k/2)+1⌉
+k + 1 is attained by using the same value of ⌊k/2⌋, but then adding 1/2 to ⌈k/2⌉ makes ⌈k/2⌉ into ⌈(k/2)+1⌉. Which because k is growing by 1, the upper bound is growing by 1. They are growing together. k+1 = ⌊(k/2)⌋, ⌈(k/2)+1⌉. 
+
+It follows A n e N P(n) where n → ⌊n/2⌋, ⌈n/2⌉ the numbers on each level of the tree differ by 1 at most for n>0.
+
+
 2B) Fix k > 0. Characterize the n for which the difference is 0 at level k. (To be
 definite, say that n is at level 0, its two children are at level 1, and so on.)
 
