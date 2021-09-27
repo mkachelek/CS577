@@ -7,11 +7,11 @@ differ by at most 1.
 # levels: log2(n) + O(1)
 # key comps <= nlogn + O(n)
 ex: n = 11 
-            11
-          5   6
-        2  3 3  3
-      1 1 1 2 1 2 1 2
-1 0 1 0 1 0 1 1 1 1 1 1 0 1 1 
+            11                   = 0
+          5   6                  = 1
+        2  3 3  3                = 2 
+      1 1 1 2 1 2 1 2            = 3
+1 0 1 0 1 0 1 1 1 1 1 1 0 1 1    = 4
 
 every level differs by 1. 
 
