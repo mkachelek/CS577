@@ -1,3 +1,5 @@
+//https://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf (page 49)
+
 3. While at an elegant dinner party, Dr. Moriarty has laced one of n glasses of wine
 with a deadly poison. Mr. Holmes is also a guest, and wishes to warn the intended
 victim as quickly as possible. Luckily, there is a chemical test for the poison that is
