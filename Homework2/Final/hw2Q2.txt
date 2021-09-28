@@ -28,15 +28,12 @@ k + 1 is attained by using the same value of ⌊k/2⌋, but then adding 1/2 to �
 
 It follows A n e N P(n) where n → ⌊n/2⌋, ⌈n/2⌉ the numbers on each level of the tree differ by 1 at most for n>0.
 
+2B) Fix k > 0. Characterize the n for which the difference is 0 at level k. (To be definite, say that n is at level 0, its two children are at level 1, and so on.)
 
-2B) Fix k > 0. Characterize the n for which the difference is 0 at level k. (To be
-definite, say that n is at level 0, its two children are at level 1, and so on.)
 
-2C) Design an algorithm that, when given a number n and a level k, finds which
-numbers occur at level k and how many of each there are. 
-
-Include a proof of its correctness. 
-Analyze the running time of your algorithm. It should be more efficient than simply writing out the tree. Full credit for an O(log n) solution.
+2C) Design an algorithm that, when given a number n and a level k, finds which numbers occur at level k and how many of each there are. 
+    Include a proof of its correctness. 
+    Analyze the running time of your algorithm. It should be more efficient than simply writing out the tree. Full credit for an O(log n) solution.
 
 public class Question2 {
 
@@ -58,3 +55,8 @@ public class Question2 {
     Question2.findKNums(83, 4);
   }
 }
+
+Include a proof of its correctness. 
+
+Analyze the running time of your algorithm. It should be more efficient than simply writing out the tree. Full credit for an O(log n) solution.
+running time: O(log n)
