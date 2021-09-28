@@ -37,6 +37,10 @@ public class Question1 {
       Ix = (ifEqual) / 3;
       Lx = 0;
     }
+    if (x == 0) {
+      Lx = ifEqual;
+      Ix = 0;
+    }
 
     Ix = ifEqual / 3; // how much each illegit gets
 
