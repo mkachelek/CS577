@@ -56,7 +56,19 @@ public class Question2 {
   }
 }
 
-Include a proof of its correctness. 
+Include a proof of its correctness. (Eric 257) number n, level k 
+
+  Now the closest pair in P either has
+both elements in one of Q or R, or it has one element in each. In the former
+case, the closest pair is correctly found by the recursive call; in the latter case,
+this pair is at distance less than δ, and it is correctly found by the remainder
+of the algorithm.
+
+I will prove that the algorithm produces a correct answer, using the facts I established in the process of designing it. The algorithm correctly outputs which numbers occur at 
+level k and how many of each there are. We prove the correctness by induction on the size of n. For a given n, where n → ⌊n/2⌋, ⌈n/2⌉ the numbers on each level of the tree differ 
+by 1 at most. For a given n, the children are computed correctly with induction. By the original question: "when n is repeatedly split using the rule n → ⌊n/2⌋, ⌈n/2⌉, thereby making a binary tree, the numbers on each level of the tree differ by at most 1," the algorithm correctly determines the numbers on the kth value. 
+
+with a for loop that goes to k. The values of the bigger and smaller children are calculated by finding the ceiling of the last ceiling value / 2, beginning with n. the lower value is calculated the same way with the floor value. 
 
 Analyze the running time of your algorithm. It should be more efficient than simply writing out the tree. Full credit for an O(log n) solution.
 running time: O(log n)
