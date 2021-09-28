@@ -68,3 +68,5 @@ way with the floor value. Using this, it follows that with n → ⌊n/2⌋, ⌈n
 
 Analyze the running time of your algorithm. It should be more efficient than simply writing out the tree. Full credit for an O(log n) solution.
 running time: O(log n)
+
+I will analyze the run time of my algorithm by bounding the size of "up" and "low" after k calculations. 
