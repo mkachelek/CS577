@@ -1,0 +1,60 @@
+2. In class (9/15/21) it was claimed that when n is repeatedly split using the rule n →
+⌊n/2⌋, ⌈n/2⌉, thereby making a binary tree, the numbers on each level of the tree
+differ by at most 1.
+
+2A) Prove this (use induction)
+
+# levels: log2(n) + O(1)
+# key comps <= nlogn + O(n)
+ex: n = 11 
+            11                   = 0
+          5   6                  = 1
+        2  3 3  3                = 2 
+      1 1 1 2 1 2 1 2            = 3
+1 0 1 0 1 0 1 1 1 1 1 1 0 1 1    = 4
+
+every level differs by 1. 
+
+I will use induction to prove A n e N P(n) where n → ⌊n/2⌋, ⌈n/2⌉ the numbers on each level of the tree differ by 1 at most for n>0.
+
+Base: if the number is 0, it will have no children. if the number is 1, then its children will be 1 and 0. All of these children differ by 1. 
+
+Hypothesis: assume P(k) holds for an arbitrary nonnegative integer k. k → ⌊k/2⌋, ⌈k/2⌉,  the numbers on each level of the tree differ by at most 1.
+Given P(k) is true, P(k+1) is also true. 
+k+1 → ⌊(k+1)/2⌋, ⌈(k+1)/2⌉
+k+1 → ⌊(k/2)+(1/2)⌋, ⌈(k/2)+(1/2)⌉
+k+1 → ⌊(k/2)⌋, ⌈(k/2)+1⌉
+k + 1 is attained by using the same value of ⌊k/2⌋, but then adding 1/2 to ⌈k/2⌉ makes ⌈k/2⌉ into ⌈(k/2)+1⌉. Which because k is growing by 1, the upper bound is growing by 1. They are growing together. k+1 = ⌊(k/2)⌋, ⌈(k/2)+1⌉. 
+
+It follows A n e N P(n) where n → ⌊n/2⌋, ⌈n/2⌉ the numbers on each level of the tree differ by 1 at most for n>0.
+
+
+2B) Fix k > 0. Characterize the n for which the difference is 0 at level k. (To be
+definite, say that n is at level 0, its two children are at level 1, and so on.)
+
+2C) Design an algorithm that, when given a number n and a level k, finds which
+numbers occur at level k and how many of each there are. 
+
+Include a proof of its correctness. 
+Analyze the running time of your algorithm. It should be more efficient than simply writing out the tree. Full credit for an O(log n) solution.
+
+public class Question2 {
+
+  public static void findKNums(int n, int k) {
+    int howMany = (int) Math.pow(2.0, k);
+    System.out.println(howMany);
+    double up = n;
+    double low = n;
+
+    for (int i = 0; i < k; i++) {
+      up = Math.ceil(up / 2);        //for alg: ⌈up/2⌉  ⌊low/2⌋
+      low = Math.floor(low / 2);
+    }
+    System.out.println(up);
+    System.out.println(low);
+  }
+
+  public static void main(String[] args) {
+    Question2.findKNums(83, 4);
+  }
+}
